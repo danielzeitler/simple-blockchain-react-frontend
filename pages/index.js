@@ -7,8 +7,14 @@ export default function Home() {
     id: ''
   });
 
+  const [wallet, setWallet] = useState("");
+
   const buyStar = () => {
     console.log("%cbuy my star", "color: red; background: black; font-size: 30px");
+  }
+
+  const connectWallet = () => {
+    console.log("hello wallet");
   }
 
   const handleChange = (e) => {
@@ -16,7 +22,10 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className="max-w-5xl mx-auto">
+      <button onClick={() => connectWallet()} className="bg-blue-500 mt-3 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+        Connect Wallet
+      </button>
       <h1 className="text-center mt-20 text-3xl font-bold">
         Kauf dein Stern &#127775; &#127775; &#127775;
       </h1>
